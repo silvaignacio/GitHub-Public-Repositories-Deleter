@@ -3,7 +3,7 @@
 
 This program uses the "go-github" Go library to delete all public repositories of a GitHub user.
 
-## Prerequistes
+## Prerequisites
 
 Before using this program, you need to obtain a personal access token from GitHub. To do so, follow these steps:
 
