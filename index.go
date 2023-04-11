@@ -7,6 +7,9 @@ import (
 	"golang.org/x/oauth2"
 )
 
+// main es la función principal del programa.
+//
+// Utiliza el token de acceso personal para autenticarse en GitHub y eliminar todos los repositorios públicos del usuario "username".
 func main() {
 	// Define los parámetros de autenticación
 	token := "Access Token"
@@ -38,6 +41,15 @@ func main() {
 	}
 }
 
+// deleteRepo elimina un repositorio de GitHub.
+//
+// Parámetros:
+// - repoOwner: El nombre de usuario del propietario del repositorio.
+// - repoName: El nombre del repositorio que se eliminará.
+// - token: El token de acceso personal para autenticar la solicitud de eliminación.
+//
+// Valor de retorno:
+// - error: Si se produce un error durante la eliminación del repositorio, se devuelve un objeto de error que describe la causa del problema. Si la eliminación se realiza correctamente, se devuelve nil.
 func deleteRepo(repoOwner, repoName, token string) error {
 	// Crea un cliente de autenticación con el token personal
 	ts := oauth2.StaticTokenSource(
