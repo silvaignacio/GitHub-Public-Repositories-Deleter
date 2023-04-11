@@ -1,4 +1,4 @@
-module go_effective
+module go_deleter_public_github_repos
 
 go 1.20
 
